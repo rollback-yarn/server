@@ -13,10 +13,15 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
+app.get('/status/:deviceId', function (req, res) {
+  res.json({
+    side_status: {
+      'SIDEA': 'OFF',
+      'SIDEB': 'ON',
+    }
+  });
 });
 
-app.listen(8080, function () {
-  console.log('Example app listening on port 8080!');
+app.listen(8081, function () {
+  console.log('Example app listening on port 8081!');
 });
