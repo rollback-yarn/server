@@ -23,8 +23,8 @@ app.get('/status/:deviceId', function (req, res) {
     return;
   }
 
-  const SIDEA = (Math.random() > 0.7);
-  const SIDEB = (Math.random() > 0.7);
+  const SIDEA = (Math.random() > 0.7) ? 1 : 0;
+  const SIDEB = (Math.random() > 0.7) ? 1 : 0;
 
   res.json({
     device_id: deviceId,
