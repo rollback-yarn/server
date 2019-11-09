@@ -15,6 +15,7 @@ app.get('/', function (req, res) {
 
 app.get('/status/:deviceId', function (req, res) {
   res.json({
+    device_id: req.params.deviceId,
     side_status: {
       'SIDEA': 'OFF',
       'SIDEB': 'ON',
