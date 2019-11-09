@@ -1,6 +1,8 @@
 const express = require('express');
 var cors = require('cors');
 var bodyParser = require('body-parser');
+const { DEVICE_IDS } = require('./constants');
+
 
 const app = express();
 
@@ -14,10 +16,20 @@ app.get('/', function (req, res) {
 });
 
 app.get('/status/:deviceId', function (req, res) {
+  const { deviceId } = req.params;
+
+  if (DEVICE_IDS.indexOf(deviceId) === -1) {
+    res.json({ error: 'unknown device id' }, 400);
+    return;
+  }
+
+  const SIDEA = (Math.random() > 0.7);
+  const SIDEB = (Math.random() > 0.7);
+
   res.json({
-    device_id: req.params.deviceId,
-    'SIDEA': 'OFF',
-    'SIDEB': 'ON',
+    device_id: deviceId,
+    SIDEA,
+    SIDEB,
   });
 });
 
