@@ -33,6 +33,10 @@ app.get('/status/:deviceId', function (req, res) {
   });
 });
 
+app.post('/creelside', function(req, res) {
+  res.json(req.body)
+})
+
 app.listen(8081, function () {
   console.log('Example app listening on port 8081!');
 });
