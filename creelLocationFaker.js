@@ -12,15 +12,15 @@ function creelLocationFaker(machineName, deviceId, side) {
 
 const MACHINE_DEVICE = {
   'Machine A': [
-    '2141c26c-031b-11ea-8d71-362b9e155667|A',
-    '2141c4c4-031b-11ea-8d71-362b9e155667|B',
-    '2141c60e-031b-11ea-8d71-362b9e155667|B',
+    'd-01|A',
+    'd-02|B',
+    'd-03|B',
   ],
   'Machine D': [
-    '2141c4c4-031b-11ea-8d71-362b9e155667|A',
-    '2141c744-031b-11ea-8d71-362b9e155667|B',
-    '2141c866-031b-11ea-8d71-362b9e155667|A',
-    '2141cbc2-031b-11ea-8d71-362b9e155667|B',
+    'd-04|A',
+    'd-05|B',
+    'd-06|A',
+    'd-02|B',
   ]
 };
 
